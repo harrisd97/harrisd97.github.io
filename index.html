@@ -181,18 +181,19 @@
   <p class="mb-0">© <script>document.write(new Date().getFullYear());</script> Harish Kumar D</p>
 </footer>
 
-<!-- JS -->
-<script src="js/vendor/jquery.min.js"></script>
-<script src="js/vendor/bootstrap.min.js"></script>
+<!-- Load jQuery first -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
-<!-- Collapse mobile navbar on click -->
+<!-- Then Bootstrap JS -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<!-- Then your collapse script -->
 <script>
   $(document).ready(function () {
-    $('.navbar-nav>li>a').on('click', function(){
+    $('.navbar-nav .nav-link').on('click', function () {
       $('.navbar-collapse').collapse('hide');
     });
   });
 </script>
-
 </body>
 </html>
