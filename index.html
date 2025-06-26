@@ -164,6 +164,28 @@
       font-weight: 600;
     }
 
+    .top-btn {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      background: #00c3ff;
+      color: #000;
+      font-size: 0.95rem;
+      padding: 10px 18px;
+      border-radius: 25px;
+      text-decoration: none;
+      font-weight: 600;
+      display: none;
+      z-index: 999;
+      box-shadow: 0 0 10px rgba(0, 195, 255, 0.4);
+      transition: all 0.3s ease;
+    }
+
+    .top-btn:hover {
+      background: #ffffff;
+      color: #000;
+    }
+
     @media (max-width: 600px) {
       h1 { font-size: 2rem; }
       .section-title { font-size: 1.5rem; }
@@ -176,7 +198,7 @@
     }
   </style>
 </head>
-<body>
+<body id="top">
 
   <header>
     <div class="profile-img"></div>
@@ -229,6 +251,15 @@
   <footer>
     © 2025 Harish Kumar D • Built with HTML & ❤️
   </footer>
+
+  <a href="#top" class="top-btn" title="Go to Top">Home ↑</a>
+
+  <script>
+    const topBtn = document.querySelector('.top-btn');
+    window.addEventListener('scroll', () => {
+      topBtn.style.display = window.scrollY > 200 ? 'inline-block' : 'none';
+    });
+  </script>
 
 </body>
 </html>
