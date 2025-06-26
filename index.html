@@ -33,6 +33,7 @@
       justify-content: center;
       padding: 80px 20px 40px;
       text-align: center;
+      min-height: 100vh;
     }
 
     .profile-img {
@@ -57,6 +58,24 @@
       font-size: 1.2rem;
       color: var(--secondary);
       margin-top: 8px;
+    }
+
+    .scroll-btn {
+      margin-top: 30px;
+      display: inline-block;
+      font-size: 1.2rem;
+      background: #ffffff;
+      color: #000;
+      padding: 10px 25px;
+      border-radius: 25px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: 0.3s ease;
+    }
+
+    .scroll-btn:hover {
+      background: #444;
+      color: #fff;
     }
 
     nav {
@@ -150,6 +169,7 @@
     <div class="profile-img"></div>
     <h1>Harish Kumar D</h1>
     <h2>Aspiring Data Engineer | PL/SQL Developer | Python Enthusiast</h2>
+    <a href="#about" class="scroll-btn">↓ View My Work</a>
   </header>
 
   <nav>
