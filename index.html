@@ -17,6 +17,11 @@
       height: 100vh;
       text-align: center;
     }
+    .img-wrapper {
+      position: relative;
+      top: 20px;     /* move down */
+      left: -20px;   /* move left */
+    }
 
     .profile-img {
       width: 160px;
@@ -61,7 +66,10 @@
 </head>
 <body>
 
-  <img src="images/IMG_9293.JPG" alt="Harish Profile Photo" class="profile-img" />
+  <div class="img-wrapper">
+    <img src="images/IMG_9293.JPG" alt="Harish Profile Photo" class="profile-img" />
+  </div>
+
   <h1>Harish Kumar D</h1>
   <h2>Aspiring Data Engineer | PL/SQL Expert | Python Enthusiast</h2>
 
