@@ -1,9 +1,0 @@
-.profile-img {
-  width: 160px;
-  height: 160px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 4px solid #fff;
-  margin-bottom: 20px;
-  transform: translate(-10px, 10px); /* ← moved left & down */
-}
