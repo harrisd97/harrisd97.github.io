@@ -65,22 +65,30 @@
       position: relative;
     }
 
-    /* Profile Image Styling - Adjust background-size and background-position to fit your photo */
-    .profile-img {
-      width: 220px;
-      height: 220px;
+    /* Profile Image Styling - wrapper with inner <img> so we can zoom (scale) the photo without changing border */
+    .profile-wrap {
+      width: 180px;
+      height: 180px;
       border-radius: 50%;
-      background-image: url('images/Harish DP.jpg');
-      background-size: 159%;            /* keep aspect ratio and fill the circle */
-      background-position:  center -90px;   /* tweak vertical position (try 30%–50%) */
-      background-repeat: no-repeat;
+      overflow: hidden;
+      margin: 0 auto 12px;
       border: 4px solid #fff;
       box-shadow: 0 0 25px rgba(0, 195, 255, 0.4);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      display: block;
     }
 
-    .profile-img:hover {
-      transform: scale(1.05);
+    .profile-wrap img {
+      width: 100%;
+      height: 100%;
+      display: block;
+      object-fit: cover;
+      object-position: center 12%; /* focus slightly above center */
+      transition: transform 0.3s ease, object-position 0.3s ease;
+      transform: scale(1.64); /* stronger zoom */
+    }
+
+    .profile-wrap:hover img {
+      transform: scale(1.58); /* stronger hover zoom */
       box-shadow: 0 0 30px rgba(0, 195, 255, 0.6);
     }
 
@@ -513,7 +521,9 @@
         text-align: center;
       }
       h1 { font-size: 2.5rem; }
-      .profile-img { width: 180px; height: 180px; }
+      .profile-wrap { width: 140px; height: 140px; }
+      /* stronger mobile zoom and adjusted focal point */
+      .profile-wrap img { transform: scale(1.64); object-position: center 12%; }
       .skills-grid, .projects-grid { grid-template-columns: 1fr; }
       .cta-buttons, .social-links { flex-direction: column; align-items: center; }
       nav a { margin: 0 10px; }
@@ -533,7 +543,7 @@
 
 <div class="main-container">
   <header>
-    <div class="profile-img"></div>
+    <div class="profile-wrap"><img src="images/Harish DP.jpg" alt="Harish Kumar D" loading="eager"></div>
     <h1>Harish Kumar D</h1>
     <p class="subtitle">Data Analyst | BI Specialist | ETL Developer</p>
     <p class="intro-text">
