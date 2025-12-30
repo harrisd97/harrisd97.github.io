@@ -59,7 +59,7 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      padding: 80px 40px 40px;
+      padding: 60px 40px 30px; /* reduced top/bottom padding for tighter layout */
       text-align: center;
       animation: fadeIn 1.2s ease;
       position: relative;
@@ -71,8 +71,8 @@
       height: 220px;
       border-radius: 50%;
       background-image: url('images/Harish DP.jpg');
-      background-size: 50%;            /* keep aspect ratio and fill the circle */
-      background-position: center 35%;   /* tweak vertical position (try 30%–50%) */
+      background-size: 159%;            /* keep aspect ratio and fill the circle */
+      background-position:  center -90px;   /* tweak vertical position (try 30%–50%) */
       background-repeat: no-repeat;
       border: 4px solid #fff;
       box-shadow: 0 0 25px rgba(0, 195, 255, 0.4);
@@ -203,15 +203,20 @@
       ============================================
     */
     section {
-      padding: 80px 20px;
+      padding: 50px 20px; /* reduced padding to decrease gap between sections */
       max-width: 1200px;
       margin: 0 auto;
       animation: fadeIn 1.2s ease;
     }
 
+    /* Slight smaller gap when sections are stacked */
+    section + section {
+      margin-top: 10px;
+    }
+
     .section-title {
       font-size: 2.5rem;
-      margin-bottom: 15px;
+      margin-bottom: 12px; /* tighten spacing */
       text-align: left;
       color: var(--highlight);
       font-weight: 700;
@@ -221,13 +226,13 @@
       font-size: 1.1rem;
       color: var(--secondary);
       text-align: left;
-      margin-bottom: 30px;
+      margin-bottom: 14px; /* tighten spacing */
     }
 
     .about-text, .job-description {
       font-size: 1.1rem;
-      line-height: 1.8;
-      margin-bottom: 30px;
+      line-height: 1.7;
+      margin-bottom: 16px; /* tighter spacing between paragraphs and lists */
     }
 
     /* Style for the "Key Strengths" list */
@@ -252,10 +257,10 @@
     */
     .experience-item {
         background: var(--card-bg);
-        padding: 30px;
+        padding: 22px; /* slightly reduced padding */
         border-radius: 15px;
         border: 1px solid var(--border);
-        margin-bottom: 30px;
+        margin-bottom: 16px; /* reduced vertical gap between items */
         transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
@@ -296,8 +301,8 @@
     .skills-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 30px;
-      margin-top: 30px;
+      gap: 20px; /* reduced gap */
+      margin-top: 16px; /* reduced top spacing */
     }
 
     .skill-category {
@@ -337,8 +342,8 @@
     .projects-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-      gap: 30px;
-      margin-top: 30px;
+      gap: 20px; /* reduced gap */
+      margin-top: 16px; /* reduced top spacing */
     }
 
     .project-card {
@@ -451,11 +456,23 @@
 
     footer {
       text-align: center;
-      padding: 50px 20px;
-      font-size: 0.9rem;
+      padding: 20px 20px; /* reduced padding for a more compact footer */
+      font-size: 0.88rem;
       color: var(--tertiary);
       background: #0a0a0a;
       border-top: 1px solid var(--border);
+    }
+
+    .footer-content {
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .footer-note {
+      color: var(--secondary);
+      margin-top: 6px;
+      font-size: 0.85rem;
+      margin-bottom: 0;
     }
     
     /* "Back to Top" button that appears on scroll */
@@ -490,7 +507,7 @@
         grid-template-columns: 1fr;
       }
       header, .about-section, .experience-section {
-        padding: 60px 20px 40px;
+        padding: 40px 20px 20px; /* reduced mobile padding */
       }
       .section-title, .section-subtitle {
         text-align: center;
@@ -518,9 +535,9 @@
   <header>
     <div class="profile-img"></div>
     <h1>Harish Kumar D</h1>
-    <p class="subtitle">Senior PL/SQL & ETL Developer | Data Analyst</p>
+    <p class="subtitle">Data Analyst | BI Specialist | ETL Developer</p>
     <p class="intro-text">
-      An award-winning database developer with 4+ years of experience, now leveraging data analytics to transform complex data into actionable business intelligence.
+      Senior Data Professional bridging the gap between technical data architecture and business decision-making. Specializing in backend data quality, ETL automation, and clear, actionable Business Intelligence.
     </p>
     <div class="cta-buttons">
       <a href="#projects" class="btn btn-primary">View My Work</a>
@@ -531,15 +548,15 @@
 
 <div class="about-section">
     <h3 class="section-title">About Me</h3>
-    <p class="section-subtitle">A seasoned database professional bridging the gap between data engineering and analytics.</p>
+    <p class="section-subtitle">A seasoned data professional bridging technical systems and business outcomes.</p>
     <div class="about-content">
       <div class="about-text">
-        <p>
-          With over four years of hands-on experience as a Senior PL/SQL Developer at MSC Technology, I have a deep expertise in designing and optimizing high-performance database solutions in Oracle 12c/19c environments. My background is rooted in engineering robust ETL pipelines, tuning complex queries, and building the data infrastructure that powers enterprise systems.
-        </p>
-        <p>
-          My recent Postgraduate Diploma in Data Analytics (4.0 GPA) from St. Clair College has expanded my skillset into the modern analytics stack, including Python, Machine Learning, and advanced BI tools. I am passionate about leveraging this dual expertise to not only build reliable data systems but also to extract the valuable stories and insights hidden within them.
-        </p>
+        <ul>
+          <li><strong>Data Professional:</strong> Senior PL/SQL Developer with 4+ years of experience in designing and optimizing high-performance database solutions in Oracle 12c/19c environments.</li>
+          <li><strong>Backend to Frontend:</strong> I don't just visualize data; I understand how it is stored, processed, and secured. I leverage this backend expertise to build accurate data analysis, robust ETL pipelines, and insightful Power BI dashboards.</li>
+          <li><strong>Data Quality & Automation:</strong> Focused on backend data quality, ETL automation, and reliable pipelines to ensure trustworthy analytical outputs.</li>
+          <li><strong>Canadian Transition:</strong> Recently graduated with a Post-Graduate Certificate in Data Analytics (4.0 GPA) from St. Clair College, fully adapting my skills to the modern Canadian analytics market.</li>
+        </ul>
       </div>
       <div class="about-strengths">
         <h4>Key Strengths</h4>
@@ -557,6 +574,8 @@
 
 <nav>
   <a href="#experience">Experience</a>
+  <a href="#education">Education</a>
+  <a href="#volunteering">Volunteering</a>
   <a href="#skills">Skills</a>
   <a href="#projects">Projects</a>
   <a href="#contact">Contact</a>
@@ -566,18 +585,55 @@
   <h3 class="section-title">Professional Experience</h3>
   <p class="section-subtitle">Highlights from my career as a Senior PL/SQL & ETL Developer</p>
   <div class="experience-item">
-    <div class="job-title">Senior Developer (SQL & Datawarehouse)</div>
-    <div class="company-name">MSC Technology (India) Private Limited - Chennai, India</div>
-    <div class="job-duration">August 2019 - August 2023</div>
+    <div class="job-title">Senior PL/SQL Developer (Data Analysis Focus)</div>
+    <div class="company-name">MSC Technology (India) Pvt Ltd</div>
+    <div class="job-duration">Aug 2019 - Aug 2023</div>
     <div class="job-description">
       <ul>
-        <li>Engineered high-performance PL/SQL packages, functions, and triggers across Oracle 12c/19c, optimizing core enterprise reporting and operational analytics.</li>
-        <li>Achieved a quantifiable <b>35% reduction in data processing time</b> by optimizing complex database queries, applying advanced indexing strategies, and refactoring existing PL/SQL and T-SQL code.</li>
-        <li>Designed, developed, and deployed <b>50+ production SSIS packages</b> for end-to-end ETL processes, handling data integration for over 50 application screens.</li>
-        <li>Processed complex inbound data feeds, implementing custom logic for <b>JSON and XML data validation</b> and conversion into structured relational tables for reporting.</li>
-        <li>Designed and maintained scalable dimensional data models (star/snowflake schemas) and E-R diagrams, supporting high-volume enterprise data warehousing.</li>
-        <li>Provided high-priority Production Support, ensuring business continuity through immediate bug fixing and ad-hoc query execution.</li>
-        <li>Awarded "Best Developer" for consistent project delivery, mentoring junior developers, and achieving measurable performance improvements.</li>
+        <li><strong>Data Analysis & Support:</strong> Performed extensive ad-hoc analysis using complex SQL to answer critical business questions and provided L3 support to ensure 100% data availability.</li>
+        <li><strong>PL/SQL Development:</strong> Developed and optimized PL/SQL packages, stored procedures, and triggers to process millions of records across customer and shipment modules.</li>
+        <li><strong>ETL & BI Reporting:</strong> Built Power BI dashboards using SQL views for operational reporting and developed SSIS packages to ingest and transform JSON/XML data from APIs into SQL Server.</li>
+        <li><strong>Performance Tuning:</strong> Tuned SQL performance using EXPLAIN plans and indexing, reducing runtimes for heavy batch processes by 35%.</li>
+        <li><strong>Leadership:</strong> Awarded “Best Developer” for consistent delivery and mentoring junior developers on performance best practices.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="education">
+  <h3 class="section-title">Education</h3>
+  <p class="section-subtitle">Formal education & certifications</p>
+  <div class="experience-item">
+    <div class="job-title">Post-Graduate Certificate in Data Analytics</div>
+    <div class="company-name">St. Clair College - Windsor, Ontario</div>
+    <div class="job-duration">Graduated 2024</div>
+    <div class="job-description">
+      <ul>
+        <li>Focus: Applied Data Analytics, Business Intelligence (BI), and Statistical Analysis.</li>
+        <li>Key Skills: Python (Pandas, NumPy), Data Visualization, Database Design, SQL, Advanced Excel.</li>
+        <li>Capstone: Completed end-to-end data analysis projects solving real-world business problems using Python and Power BI.</li>
+      </ul>
+    </div>
+  </div>
+  <div class="experience-item">
+    <div class="job-title">Bachelor of Engineering (Mechanical Engineering)</div>
+    <div class="company-name">Anna University - Chennai, India</div>
+    <div class="job-duration">Graduated 2019</div>
+  </div>
+</section>
+
+<section id="volunteering">
+  <h3 class="section-title">Volunteering</h3>
+  <p class="section-subtitle">Contributions to community organizations</p>
+  <div class="experience-item">
+    <div class="job-title">Data Analyst Volunteer</div>
+    <div class="company-name">York Regional Education Services - Canada</div>
+    <div class="job-duration">Volunteering</div>
+    <div class="job-description">
+      <ul>
+        <li><strong>Data Management & Excel:</strong> Maintain and update accurate administrative datasets using Microsoft Excel; perform data cleansing and validation to identify duplicates or errors.</li>
+        <li><strong>Reporting & Visualization:</strong> Create Excel charts and graphs to visualize trends and make information accessible to management.</li>
+        <li><strong>Efficiency:</strong> Assist in generating ad-hoc reports to support decision-making and streamline data entry processes.</li>
       </ul>
     </div>
   </div>
@@ -607,6 +663,7 @@
         <span class="skill-tag">Data Modeling</span>
         <span class="skill-tag">Star Schema</span>
         <span class="skill-tag">Performance Tuning</span>
+        <span class="skill-tag">JSON Parsing</span>
       </div>
     </div>
     <div class="skill-category">
@@ -629,6 +686,7 @@
         <span class="skill-tag">Power Query</span>
         <span class="skill-tag">Matplotlib</span>
         <span class="skill-tag">Seaborn</span>
+        <span class="skill-tag">Excel (VBA)</span>
       </div>
     </div>
     <div class="skill-category">
@@ -744,7 +802,10 @@
 </section>
 
 <footer>
-  <p>© 2025 Harish Kumar D • Crafted with passion for data and technology</p>
+  <div class="footer-content">
+    <p>© 2025 Harish Kumar D</p>
+    <p class="footer-note">Built with passion for data and technology — developed with help from GitHub Copilot.</p>
+  </div>
 </footer>
 
 <a href="#top" class="top-btn" title="Back to Top">↑ Top</a>
@@ -770,24 +831,39 @@
     });
   });
 
-  // Active navigation highlighting on scroll
-  window.addEventListener('scroll', () => {
+  // Improved active navigation highlighting
+  function updateActiveNav() {
     const sections = document.querySelectorAll('section');
     const navLinks = document.querySelectorAll('nav a');
-    
     let current = '';
+
     sections.forEach(section => {
-      const sectionTop = section.offsetTop;
-      if (scrollY >= sectionTop - 200) { // -200px offset to highlight a bit earlier
+      const rectTop = section.getBoundingClientRect().top;
+      // Choose the section whose top is closest to the top of the viewport (with a small offset)
+      if (rectTop <= 120) { // 120px offset to account for sticky nav and comfortable highlighting
         current = section.getAttribute('id');
       }
     });
 
     navLinks.forEach(link => {
       link.classList.remove('active');
-      if (link.getAttribute('href') === `#${current}`) {
+      if (current && link.getAttribute('href') === `#${current}`) {
         link.classList.add('active');
       }
+    });
+  }
+
+  // Run on scroll/resize/load/hashchange
+  window.addEventListener('scroll', updateActiveNav);
+  window.addEventListener('resize', updateActiveNav);
+  window.addEventListener('load', updateActiveNav);
+  window.addEventListener('hashchange', updateActiveNav);
+
+  // Ensure a clicked nav link is highlighted immediately for feedback
+  document.querySelectorAll('nav a').forEach(link => {
+    link.addEventListener('click', function () {
+      document.querySelectorAll('nav a').forEach(l => l.classList.remove('active'));
+      this.classList.add('active');
     });
   });
 </script>
